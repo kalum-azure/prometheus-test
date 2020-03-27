@@ -77,8 +77,7 @@ services:
       - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
       - '--no-collector.ipvs'
     deploy:
-      mode: replicated
-      replicas: 1
+      mode: global
       placement:
         constraints:
           - node.role == manager
